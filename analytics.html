@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics - DevCore</title>
+  <link rel="stylesheet" href="analytics.css">
+</head>
+<body>
+  <div class="analytics-container">
+    <header class="analytics-header">
+      <button type="button" onclick="history.back();" class="btn-back">&#8592; Back</button>
+      <h1>DevCore Analytics</h1>
+      <p>Real-time overview of team metrics, onboarding activity, and code review trends.</p>
+    </header>
+
+    <!-- Key Metrics Grid -->
+    <div class="metrics-grid">
+      <div class="card metric-card">
+        <h3>Total Job Applications</h3>
+        <p id="stat-apps" class="metric-value">0</p>
+      </div>
+      <div class="card metric-card">
+        <h3>Pending Leave Requests</h3>
+        <p id="stat-leaves" class="metric-value">0</p>
+      </div>
+      <div class="card metric-card">
+        <h3>Logged Time Entries</h3>
+        <p id="stat-timecards" class="metric-value">0</p>
+      </div>
+    </div>
+
+    <!-- Simple Trend Chart Card -->
+    <div class="card">
+      <h3>Monthly Payroll Trend ($)</h3>
+      <p class="chart-subtitle">Simulated historical wage growth over recent quarters</p>
+      
+      <!-- Pure CSS Bar Chart -->
+      <div class="bar-chart-wrapper">
+        <div class="bar-chart">
+          <div class="bar-group"><div class="bar" style="height: 40%;"><span>$42k</span></div></div>
+          <div class="bar-group"><div class="bar" style="height: 55%;"><span>$55k</span></div></div>
+          <div class="bar-group"><div class="bar" style="height: 70%;"><span>$68k</span></div></div>
+          <div class="bar-group"><div class="bar" style="height: 90%;"><span>$85k</span></div></div>
+        </div>
+        <div class="bar-labels">
+          <span class="bar-label">Q1</span>
+          <span class="bar-label">Q2</span>
+          <span class="bar-label">Q3</span>
+          <span class="bar-label">Q4</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="analytics.js"></script>
+</body>
+</html>
+

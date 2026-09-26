@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Portal - HR System</title>
+  <link rel="stylesheet" href="employee.css">
+</head>
+<body>
+  <div class="portal-container">
+    <header class="portal-header">
+      <h1 id="emp-welcome">Welcome, Employee</h1>
+      <button onclick="window.location.href='analytics.html'" class="btn-secondary">Analytics</button>
+      <button onclick="employeeLogout()" class="btn-secondary">Switch / Logout</button>
+    </header>
+
+    <!-- Time Clock Module -->
+    <div class="card">
+      <h3>Time Tracking</h3>
+      <div class="button-row">
+        <button onclick="logTime('Clock In')" class="btn-primary">Clock In</button>
+        <button onclick="logTime('Lunch Break')" class="btn-secondary">Lunch Break</button>
+        <button onclick="logTime('Clock Out')" class="btn-danger">Clock Out</button>
+      </div>
+      <p id="clock-status" style="margin-top: 0.75rem; color: #64748b; font-size: 0.9rem;">Status: Not active today</p>
+    </div>
+
+    <!-- Personal Leave Requests Module -->
+    <div class="card">
+      <h3>Submit Leave Request</h3>
+      <form id="emp-leave-form">
+        <div class="form-group" style="margin-bottom: 0.75rem;">
+          <label for="emp-leave-type">Leave Type</label>
+          <select id="emp-leave-type" style="width: 100%; padding: 0.5rem;">
+            <option value="Vacation">Vacation</option>
+            <option value="Sick Leave">Sick Leave</option>
+            <option value="Personal">Personal</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom: 0.75rem;">
+          <label for="emp-leave-date">Date</label>
+          <input type="date" id="emp-leave-date" style="width: 100%; padding: 0.5rem;" required>
+        </div>
+        <button type="submit" class="btn-primary">Submit Application</button>
+      </form>
+
+      <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">My Request History</h4>
+      <ul id="emp-request-list" style="list-style: none; padding: 0;">
+        <!-- Populated via JS -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="employee.js"></script>
+</body>
+</html>
+

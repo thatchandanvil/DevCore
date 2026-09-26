@@ -1,0 +1,58 @@
+
+Roger England <rogerenglands2@gmail.com>
+11:10 AM (0 minutes ago)
+to me
+
+
+Listen
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application - Careers</title>
+  <link rel="stylesheet" href="apply.css">
+</head>
+<body>
+  <div class="apply-container">
+    <header class="apply-header">
+      <a href="register.html" class="btn-back">&#8592; Back to Registration</a>
+      <h1>Join Our Team</h1>
+      <p>Submit your application and resume for consideration.</p>
+    </header>
+
+    <div class="card">
+      <form id="job-application-form">
+        <div class="form-group">
+          <label for="app-name">Full Name</label>
+          <input type="text" id="app-name" placeholder="e.g., Sarah Jenkins" required />
+        </div>
+
+        <div class="form-group">
+          <label for="app-email">Email Address</label>
+          <input type="email" id="app-email" placeholder="sarah@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="app-position">Position Applied For</label>
+          <select id="app-position">
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="HR Specialist">HR Specialist</option>
+            <option value="Customer Support">Customer Support</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="app-resume">Upload Resume (PDF/DOC)</label>
+          <input type="file" id="app-resume" accept=".pdf,.doc,.docx" required />
+        </div>
+
+        <button type="submit" class="btn-primary">Submit Application</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="apply.js"></script>
+</body>
+</html>
+
